@@ -1,0 +1,386 @@
+<title>Mis habilidades en movimiento</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&display=swap">
+<style>
+/* Concepto: festival deportivo de stickers. Bordes gruesos, sombras duras, un color por zona del camino, números gigantes. */
+:root{
+  --bg:#CFEFFF; --surface:#FFFFFF; --ink:#101C4A; --muted:#37457A; --line:#101C4A; --shadow:#101C4A;
+  --sun:#FFC91F; --sky:#35B0FF; --coral:#FF6A57; --mint:#22CC93; --violet:#7B52FF; --on-violet:#FFFFFF; --pink:#FF8AC4;
+  --f-display:'Lilita One','Arial Rounded MT Bold','Trebuchet MS',system-ui,sans-serif;
+  --f-body:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1433; --surface:#18235A; --ink:#F4F6FF; --muted:#B5C0F2; --line:#8E9CF0; --shadow:#02050F;
+  --sun:#FFD23F; --sky:#4DBBFF; --coral:#FF7A68; --mint:#2EDBA1; --violet:#8F6BFF; --on-violet:#FFFFFF; --pink:#FF9ACD; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1433; --surface:#18235A; --ink:#F4F6FF; --muted:#B5C0F2; --line:#8E9CF0; --shadow:#02050F;
+  --sun:#FFD23F; --sky:#4DBBFF; --coral:#FF7A68; --mint:#2EDBA1; --violet:#8F6BFF; --on-violet:#FFFFFF; --pink:#FF9ACD; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:700 17px/1.55 var(--f-body);margin:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.01em}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:22px 56px}
+.sticker{background:var(--surface);border:3px solid var(--line);border-radius:20px;box-shadow:6px 6px 0 var(--shadow)}
+/* barra */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ink);color:var(--bg);border-bottom:3px solid var(--line)}
+:root[data-theme="dark"] .bar{background:var(--surface);color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bar{background:var(--surface);color:var(--ink)}}
+.bar .in{max-width:1040px;margin:0 auto;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:8px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px))}
+.bar b{font:400 20px var(--f-display);letter-spacing:.02em}
+.bar nav{display:flex;gap:8px}
+.bar nav a{text-decoration:none;font-weight:800;font-size:15px;padding:6px 14px;border-radius:99px;border:2px solid currentColor}
+.bar nav a:hover,.bar nav a:focus-visible{background:var(--sun);color:#101C4A;border-color:var(--sun);outline:none}
+.bar nav a[aria-current=page]{background:var(--sun);color:#101C4A;border-color:var(--sun)}
+/* cinta */
+.ribbon{overflow:hidden;background:var(--coral);border-block:3px solid var(--line);color:#101C4A;transform:rotate(-1.2deg);margin:26px -20px 6px}
+.ribbon div{display:flex;gap:28px;width:max-content;padding:8px 0;font:400 22px var(--f-display);letter-spacing:.08em;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* héroe */
+.hero{position:relative;overflow:hidden;background:var(--sun);color:#101C4A;border:3px solid var(--line);border-radius:28px;box-shadow:8px 8px 0 var(--shadow);padding:26px 22px 28px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;align-items:center}
+.hero>*{min-width:0}
+.tag{display:inline-block;background:#101C4A;color:#fff;border-radius:99px;padding:6px 14px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,9vw,76px);margin:14px 0 14px;color:#101C4A;text-shadow:3px 3px 0 #fff}
+.bubble{position:relative;background:#fff;color:#101C4A;border:3px solid #101C4A;border-radius:20px;padding:12px 16px;font-weight:800;font-size:19px;max-width:34ch}
+.cta{display:inline-block;margin-top:18px;background:#101C4A;color:#fff;text-decoration:none;font:400 26px var(--f-display);padding:12px 26px;border-radius:99px;border:3px solid #101C4A;box-shadow:5px 5px 0 var(--coral);transition:transform .15s}
+.cta:hover,.cta:focus-visible{transform:translate(-2px,-2px);outline:3px solid #fff;outline-offset:3px}
+.hero svg{width:100%;height:auto;max-height:340px;animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(1.5deg)}}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.hero svg{max-height:230px}}
+/* pasos */
+h2.big{font-size:clamp(30px,6vw,44px);margin:44px 0 16px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.steps>*{min-width:0}
+.step{padding:16px 18px;display:grid;gap:6px;background:var(--surface)}
+.step i{font:400 34px var(--f-display);font-style:normal;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--line);color:#101C4A}
+.step:nth-child(1) i{background:var(--sky)} .step:nth-child(2) i{background:var(--mint)} .step:nth-child(3) i{background:var(--sun)}
+.step h3{font-size:24px}
+.bring{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.chip{background:var(--surface);border:3px solid var(--line);border-radius:99px;padding:6px 16px;font-weight:800}
+/* camino */
+.zone{margin-top:30px}
+.zone h3{display:inline-block;font-size:24px;padding:6px 18px;border:3px solid var(--line);border-radius:99px;box-shadow:4px 4px 0 var(--shadow);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.tile{position:relative;display:flex;flex-direction:column;gap:6px;min-width:0;min-height:150px;padding:14px 16px 14px;border:3px solid var(--line);border-radius:22px;box-shadow:6px 6px 0 var(--shadow);text-decoration:none;color:#101C4A;transition:transform .15s,box-shadow .15s}
+.tile:nth-child(odd){transform:rotate(-1deg)} .tile:nth-child(even){transform:rotate(1deg)}
+.tile:hover,.tile:focus-visible{transform:translate(-3px,-3px) rotate(0);box-shadow:9px 9px 0 var(--shadow);outline:none}
+.tile:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
+.tile .n{font:400 64px/0.9 var(--f-display);-webkit-text-stroke:2px #101C4A;color:#fff;text-shadow:3px 3px 0 #101C4A}
+.tile .t{font-weight:800;font-size:19px;line-height:1.2}
+.tile .st{margin-top:auto;font-weight:800;font-size:14px;background:rgba(255,255,255,.75);border-radius:99px;padding:2px 12px;align-self:flex-start}
+.tile.done::after{content:"★";position:absolute;right:12px;top:8px;font-size:34px;color:#101C4A;text-shadow:2px 2px 0 #fff}
+.z0{background:var(--sun)} .z1{background:var(--sky)} .z2{background:var(--coral)} .z3{background:var(--violet);color:var(--on-violet)} .z4{background:var(--mint)}
+.tile.z3{color:#fff} .tile.z3 .t{color:#fff} .tile.z3 .st{color:#101C4A}
+.zone h3.z3{color:var(--on-violet)} .zone h3.z0,.zone h3.z1,.zone h3.z2,.zone h3.z4{color:#101C4A}
+.prog{height:22px;border:3px solid var(--line);background:var(--surface);border-radius:99px;overflow:hidden;margin-top:22px}
+.prog i{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--mint) 0 12px,#17b07e 12px 24px);transition:width .4s}
+.progtxt{margin:8px 0 0;font-weight:800;color:var(--muted)}
+/* semana */
+.banner{position:relative;overflow:hidden;border:3px solid var(--line);border-radius:28px;box-shadow:8px 8px 0 var(--shadow);padding:22px 22px 24px;color:#101C4A}
+.banner.z3{color:#fff}
+.banner .num{position:absolute;right:8px;bottom:-34px;z-index:0;font:400 clamp(120px,24vw,230px)/1 var(--f-display);color:rgba(255,255,255,.4);-webkit-text-stroke:3px #101C4A;pointer-events:none;user-select:none}
+.banner>*:not(.num){position:relative;z-index:1}
+.banner .kicker{max-width:calc(100% - 70px)}
+.kicker{font:800 14px var(--f-body);letter-spacing:.09em;text-transform:uppercase}
+.banner h1{font-size:clamp(34px,7vw,60px);margin:8px 0 12px;max-width:16ch;text-shadow:3px 3px 0 rgba(255,255,255,.7)}
+.banner.z3 h1{text-shadow:3px 3px 0 #101C4A}
+.pill{display:inline-block;font-weight:800;font-size:14px;border-radius:99px;padding:4px 14px;background:#fff;color:#101C4A;border:2px solid #101C4A}
+.stack{display:grid;gap:18px;margin-top:22px}
+.panel{background:var(--surface);border:3px solid var(--line);border-radius:20px;box-shadow:5px 5px 0 var(--shadow);padding:16px 20px 18px}
+.panel h3{font-size:24px;margin-bottom:8px}
+.panel ul{margin:6px 0 0;padding-left:22px} .panel li{margin:6px 0;font-weight:700}
+.panel p{font-weight:700}
+.goal{background:var(--sun);color:#101C4A;border-radius:24px 24px 24px 4px}
+.goal h3{color:#101C4A} .goal p{font-size:21px;font-weight:800}
+.panel.home{background:var(--mint);color:#101C4A}
+.panel.fam{background:var(--pink);color:#101C4A}
+.panel.fam h3,.panel.home h3{color:#101C4A}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.cols>*{min-width:0}
+.safe{background:var(--coral);color:#101C4A;border-style:dashed}
+.safe h3{color:#101C4A}
+.vid{display:grid;gap:10px}
+.vid iframe{width:100%;aspect-ratio:16/9;border:3px solid var(--line);border-radius:14px;max-width:100%}
+.btn{display:inline-block;font:400 19px var(--f-display);letter-spacing:.02em;border:3px solid var(--line);background:var(--sun);color:#101C4A;border-radius:99px;padding:8px 20px;cursor:pointer;text-decoration:none;box-shadow:4px 4px 0 var(--shadow);transition:transform .12s}
+.btn:hover{transform:translate(-2px,-2px)}
+.btn.ghost{background:var(--surface);color:var(--ink)}
+.btn:focus-visible{outline:4px solid var(--violet);outline-offset:3px}
+.btn[aria-pressed=true]{background:var(--mint);color:#101C4A}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px}
+.tabs{display:flex;gap:10px;margin:14px 0;flex-wrap:wrap}
+.opt{display:block;width:100%;text-align:left;font:800 18px var(--f-body);background:var(--surface);color:var(--ink);border:3px solid var(--line);border-radius:16px;padding:12px 16px;margin:10px 0;cursor:pointer;box-shadow:4px 4px 0 var(--shadow)}
+.opt:hover:not(:disabled){background:var(--sun);color:#101C4A}
+.opt.ok{background:var(--mint);color:#101C4A} .opt.bad{background:var(--coral);color:#101C4A}
+.fb{margin-top:10px;font-weight:800}
+.stars{font-size:46px;color:var(--sun);letter-spacing:6px;-webkit-text-stroke:2px var(--line)}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:660px}
+.card{aspect-ratio:1/1;min-width:0;border:3px solid var(--line);border-radius:14px;background:var(--violet);color:#fff;font:800 14px/1.2 var(--f-body);cursor:pointer;padding:4px;display:grid;place-items:center;text-align:center;overflow-wrap:anywhere;box-shadow:3px 3px 0 var(--shadow)}
+.card.up{background:var(--sun);color:#101C4A} .card.match{background:var(--mint);color:#101C4A}
+.chk label{display:flex;gap:12px;align-items:flex-start;padding:6px 0;font-weight:800}
+.chk input{width:26px;height:26px;margin-top:1px;accent-color:var(--violet)}
+footer{margin-top:44px;color:var(--muted);font-size:14px;font-weight:700}
+@media (max-width:520px){.mem{gap:6px}.card{font-size:12px}.ribbon{margin-inline:-16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="bar"><div class="in"><b>Educación Física · Grado 2°</b>
+<nav aria-label="Principal"><a href="#inicio" id="n-inicio">Inicio</a><a href="#familias" id="n-familias">Familias</a></nav></div></header>
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<script>
+const EMBED = location.protocol.startsWith('http');
+const VID = {
+ 2:['n4fzPuWHp_c','Locomoción con Rosita (Educación Física, 1º y 2º)'],
+ 4:['mYTsukrBjSk','Percepción espacio-temporal (2º primaria)'],
+ 5:['1cg1CWMvFDc','Equilibrio estático y dinámico (1.er ciclo de primaria)'],
+ 6:['ITC2abtN7yQ','Desplazamientos y saltos: circuito motriz'],
+ 7:['ecQQpPaN2qA','Educación física: lanzar y atrapar'],
+ 8:['c2OGdR-aZ-E','Cómo saltar la cuerda para niños principiantes'],
+ 9:['79N8kiOmoTQ','Aprende a jugar golosa'],
+ 11:['YmfSlHbHPBE','Kickball, adaptación escolar'],
+ 12:['54AYLjdoWRw','Cuento motor: El bosque (inicial, 1.º y 2.º)']
+};
+const W = [
+{n:1,t:'Bienvenidos de nuevo',z:'Arranque',ind:'A',
+ obj:'Vamos a ponernos de acuerdo para cuidarnos y jugar bien: normas, agua, uniforme, puntualidad y respeto.',
+ cal:'Círculo de bienvenida, movilidad de articulaciones en ronda y trote suave en el puesto.',
+ main:['Recorrido por los espacios de clase (patio, coliseo) y sus límites.','Construimos juntos los acuerdos de clase y los firmamos con una huella o una estrella.','Juegos de integración: Chucha puente (con sus variantes) y “Micos a sus palos, conejos a sus madrigueras”.'],
+ calma:'Estiramiento de piernas y brazos y respiración tranquila.',mat:'Conos, tizas, botella de agua de cada estudiante.',
+ eva:['Observación: escucha las instrucciones y cumple los acuerdos.','Rúbrica actitudinal'],
+ casa:'Prepara tu bolsa de Educación Física con uniforme, botella de agua y una toalla pequeña.',
+ fam:'Después de las vacaciones, ayuda a que tu hija o hijo llegue con uniforme, botella con agua y a la hora.',
+ pact:true},
+{n:2,t:'Mis habilidades',z:'Mi cuerpo y mi equilibrio',ind:'C',
+ obj:'Reconozco que mis movimientos pueden ser naturales o construidos, y los llamo por su nombre: locomoción, manipulación y estabilidad.',
+ cal:'Movilidad articular en círculo, desplazamientos variados y estiramiento de brazos y piernas.',
+ main:['Locomoción: caminar, correr, saltar y reptar por la cancha.','Manipulación: relevos con balones gigantes (rebotar, rodar y transportar con fuerza de brazos).','Juego de la mosquita en grupos de 5.','La profe observa tu nivel motriz de partida.'],
+ calma:'Estiramiento y comentamos qué movimiento fue más fácil y cuál más difícil.',mat:'Balones gigantes, conos, petos.',
+ eva:['Observación del nivel motriz de partida y participación.','Competencia: reconoce y coordina los movimientos que necesita para cada tarea.'],
+ casa:'Dibuja o cuenta con tu familia 3 movimientos que haces en el día: uno de desplazarte, uno de agarrar algo y uno de quedarte quieto en equilibrio.',
+ fam:'Pregunte: “¿Qué movimiento te salió más fácil hoy?”. No importa corregir; importa que lo nombre.'},
+{n:3,t:'Test de aptitud física',z:'Mi cuerpo y mi equilibrio',ind:'C',
+ obj:'Conozco mi punto de partida en reacción y velocidad para comparar mi progreso más adelante.',
+ cal:'Movilidad articular en círculo, desplazamientos en grupo y estiramiento.',
+ main:['Test de reacción: agarre del bastón (compañera suelta el bastón y tú lo atrapas).','Test de velocidad: carrera de 20 metros.','Juego libre con cuerdas, aros y balones gigantes mientras esperas tu turno.','La profe anota tus resultados en la lista del grupo.'],
+ calma:'Estiramiento y charla: ¿cómo me sentí con estos retos?',mat:'Bastón, silla, cinta de enmascarar, tiza, conos, cuerdas, aros, balones gigantes.',
+ eva:['Registro de resultados de cada test (sin nota: es el punto de partida).','Competencia y actitud: motivación y disposición.'],
+ casa:'Practica atrapar algo suave que cae (un calcetín enrollado) y cuenta cuántas veces seguidas lo logras.',
+ fam:'Estos datos no se califican: se guardan para que su hija o hijo vea cuánto mejora al final del año.',
+ seg:'Carril de 20 m despejado y con zona de frenado al final. Salidas de a una o dos estudiantes.'},
+{n:4,t:'Me oriento en el espacio y en el tiempo',z:'Mi cuerpo y mi equilibrio',ind:'C',
+ obj:'Me ubico en el espacio (adelante, atrás, a un lado) y reacciono a tiempo cuando suena la señal.',
+ cal:'Juego del león y los conejos, y recordamos “Las olas” y “Aro base”.',
+ main:['Relevo del canguro: saltar aros con la pelota entre las piernas y cambiar la forma del recorrido (rebotando, lanzando, de cangrejito).','Relevo en circuito llevando un objeto y cambiando el desplazamiento: corriendo, gateando, rodando.','Pepitas y pepotas: escapas solo cuando dicen tu nombre.','Reto en parejas: inventen un circuito nuevo con el material que les toque.'],
+ calma:'Estiramiento y cada pareja presenta su circuito en un minuto.',mat:'Aros, pelotas pequeñas, pelotas gigantes, conos, bastones.',
+ eva:['Creatividad en pareja: el circuito que inventan.','Competencia: ubica y ajusta sus movimientos en el espacio.'],
+ casa:'Inventa con tu familia un recorrido en casa: “tres pasos adelante, uno atrás, giro a la derecha”.',
+ fam:'Dele órdenes cortas de orientación: arriba, abajo, delante, detrás, a un lado, y que las ejecute.'},
+{n:5,t:'Equilibrio y ajuste postural',z:'Mi cuerpo y mi equilibrio',ind:'C',
+ obj:'Mantengo mi cuerpo estable en quietud y en movimiento, incluso cuando me cambian el piso o me mareo un poco.',
+ cal:'Chucha 1 y 2 (si dicen 1, los 1 atrapan a los 2; si dicen 2, cambian los papeles).',
+ main:['Pelea de gallos: en cuclillas y de pie.','Chucha estatua con figuras de equilibrio: árbol, angelito, plancha.','Me levanto con mi pareja.','Muñeco de trapo y muñeco tieso, en tríos, con mucho cuidado.','Con ojos cerrados: sigo la instrucción, doy 3 vueltas y levanto un pie. ¿Logro 3 segundos?'],
+ calma:'Gato tranquilo, gato enfadado. Conversamos: ¿qué sentí al desorientarme?',mat:'Colchonetas, espacio despejado.',
+ eva:['¿Mantiene el equilibrio más de 3 segundos?','Competencia: control corporal y ajuste postural.'],
+ casa:'Equilibrio de flamenco: cuenta en voz alta cuántos segundos aguantas en un pie, primero con un pie y luego con el otro.',
+ fam:'Practiquen juntos y celebren el progreso en segundos, no la perfección.',
+ seg:'Muñeco de trapo y tieso: movimientos suaves y siempre con aviso a la compañera. Con los ojos cerrados, alguien cerca de ti.'},
+{n:6,t:'Equilibrio en altura y profundidad',z:'Mi cuerpo y mi equilibrio',ind:'C',
+ obj:'Controlo mi cuerpo al subir, saltar y caer sin perder el equilibrio.',
+ cal:'Chucha el oso hormiguero: los osos atrapan hormigas y las demás las cargan al hormiguero.',
+ main:['Carreras en una pata, chucha estatua, relevo del avestruz.','Caminar por las gradas del coliseo y hacer pases con la compañera; subimos la altura poco a poco.','Correr y saltar sobre colchonetas dobladas en hilera y quedar en estatua.','Salto y caída sobre colchoneta: primero apoyando manos, luego sosteniendo 2 segundos, luego dentro de un aro con manos arriba.','Costales en tríos (llevar y traer a la compañera sentada) y paso por la viga alta en distintas posiciones.'],
+ calma:'Estiramiento dirigido por una estudiante.',mat:'Colchonetas, aros, trampolín, costales, viga alta.',
+ eva:['Ajuste postural y control corporal en la caída (2 segundos).','Competencia: equilibrio en altura y profundidad.'],
+ casa:'Con ayuda de un adulto, camina sobre una línea en el piso: hacia adelante, hacia atrás y de lado.',
+ fam:'No aplique saltos desde alturas en casa. Basta con caminar sobre líneas y equilibrarse con apoyo.',
+ seg:'Trampolín y viga alta solo con la profe al lado. Zapatos de la clase en la colchoneta, nunca descalzos en la viga. Nadie se monta sobre la espalda de otra persona.'},
+{n:7,t:'Coordinación con elementos',z:'Elementos y juego',ind:'C',
+ obj:'Lanzo, atrapo, rebote y pateo con control, usando mano derecha, mano izquierda y los dos lados.',
+ cal:'Ronda “Gey gey gey bugi bugi gey” y carreras variando la posición del cuerpo.',
+ main:['Individual: lanzar, atrapar, rebotar, rodar y patear.','Lanzamientos contra las escalas con 1 mano (derecha e izquierda) y con 2 manos; recuerda el pie que va adelante según la mano que lanza.','En parejas con 1 pelota y luego con 2. Juego “Págame si puedes”.','Blanco móvil e inmóvil: pasar la pelota por un aro quieto o rodando.','Bolos, encestar aros en un cono, “el traga bolas” con ping pon y arquero con colchonetas.'],
+ calma:'Estiramiento dirigido por una estudiante.',mat:'Pelotas, aros, colchonetas, conos, bolos, baldes.',
+ eva:['¿Entiende la instrucción y maneja la pelota en forma individual y grupal?','Competencia: coordina patrones con elementos.'],
+ casa:'Lanza y atrapa una media enrollada con la mano derecha y luego con la izquierda: ¿cuántas veces seguidas?',
+ fam:'Cambien de mano y de distancia. Un reto fácil primero, y uno más difícil después.'},
+{n:8,t:'Cuerdas y saltos',z:'Elementos y juego',ind:'C',
+ obj:'Salto la cuerda con distintos pasos y con ambos lados del cuerpo, y creo mi propio salto.',
+ cal:'Cuerda larga: la culebrita y la cuchilla.',
+ main:['Cuerda corta: caminando, corriendo, pies juntos, ochos, pie derecho y pie izquierdo, balanceo a los lados.','En parejas con una sola cuerda, frente a frente, luego uno de frente y otro de espaldas.','En tríos: dos voltean, una salta; aprender a entrar mientras voltean.','Juegos de cuerda larga: el reloj, el caracol, “¿cuántos años tiene la niña?”.','Raquetas de mini tenis: familiarización con la pelota, contra la pared y 1 contra 1.','Reto de grupo: inventar un salto nuevo.'],
+ calma:'Estiramiento y mostramos el salto inventado.',mat:'Cuerdas cortas y largas, raquetas de mini tenis, pelotas.',
+ eva:['Creatividad y trabajo en grupo con el salto nuevo.','Competencia: independencia segmentaria, usa brazos y piernas por separado.'],
+ casa:'Practica 5 minutos de salto de cuerda (o saltos imaginarios sin cuerda) y cuenta tu mejor racha.',
+ fam:'Si no hay cuerda, sirve una soga limpia o saltar “la cuerda imaginaria”.',
+ seg:'Cuerda larga: espacio despejado y quien voltea se pone lejos de las demás.'},
+{n:9,t:'Juegos tradicionales',z:'Elementos y juego',ind:'CA',
+ obj:'Descubro cuántas formas de moverme hay en los juegos de siempre y los juego respetando las reglas.',
+ cal:'Chucha pata sola o avestruz, pelota envenenada, bote tarro.',
+ main:['Pañuelito y ponchado.','Juegos de piso: golosa, rayuela, triqui y Vuelta a Colombia (con tizas, tapas y piedras).','Bote tarro y el juego de los números: stop.','Boy y escondidijo: bases dibujadas con tiza.','Jeimy, con petos, pelota y cuerda.'],
+ calma:'Estiramiento dirigido y contamos cuál juego fue el favorito y por qué.',mat:'Tizas, tapas, piedras, pelotas, aros, petos, cuerdas.',
+ eva:['Participación y compromiso en los juegos.','Actitud: cumple las normas y colabora; Competencia: usa distintas formas de moverse.'],
+ casa:'Pregúntale a una persona mayor a qué jugaba de niña o niño y cuéntalo en la próxima clase.',
+ fam:'Es la semana para que los abuelos y adultos cuenten sus juegos: pueden jugar uno juntos.',
+ seg:'Juegos con persecución: sin empujones. Nadie queda eliminado por mucho tiempo; se reintegra con una acción.'},
+{n:10,t:'Semana de evaluación',z:'Para demostrar lo aprendido',ind:'CA',eval:true,
+ obj:'Muestro lo que aprendí en las semanas 2 a 9 con un quiz y un juego de parejas.',
+ cal:'Movilidad y juego de reacción.',
+ main:['Quiz de 8 preguntas.','Juego de memoria: une cada movimiento con su nombre.','Repaso práctico de lo mejor de cada semana.'],
+ calma:'Autoevaluación de la semana.',mat:'Computador o tableta.',
+ eva:['Quiz y juego de parejas, más observación en clase.','Competencia y actitud.'],
+ casa:'Repite el quiz hasta lograr 3 estrellas.',
+ fam:'El quiz no guarda notas: es práctica. Si lo hacen en casa, ayude leyendo las preguntas.'},
+{n:11,t:'Iniciación al kickball',z:'Cierre del periodo',ind:'CA',
+ obj:'Aprendo las reglas del kickball y juego en equipo, respetando turnos y compañeras.',
+ cal:'Movilidad en hileras y desplazamientos en 2 hileras.',
+ main:['Juegos de lanzamiento para ponchar: ponchadito, primero todo el grupo y luego tríos.','Parejas que simulan pasar a una base: una intenta ponchar a la compañera antes de que llegue.','Decido: ¿ponchar a la compañera o a la base? Depende de qué esté más cerca.','Vocabulario del juego: strike 1, 2 y 3, out, aire y foul ball.','Torneo interno por salones: cuatro equipos esperan mientras dos juegan y rotan cada 10 minutos.','Reto opcional: mini torneo de fútbol rey de cancha en equipos de 4.'],
+ calma:'Estiramiento dirigido y comentamos reglas que debemos recordar.',mat:'Pelotas, aros, petos, conos, patio de primaria.',
+ eva:['Torneo interno: el grupo y cada estudiante en el juego.','Actitud: respeta turnos y reglas; Competencia: lanza, patea y se desplaza con elementos.'],
+ casa:'Cuenta en casa cómo se juega el kickball con tus propias palabras.',
+ fam:'El torneo interno elige los equipos de cada salón para el descanso. Anime sin comparar.'},
+{n:12,t:'Expresión y cierre',z:'Cierre del periodo',ind:'A',
+ obj:'Cuento una historia con mi cuerpo, juego en equipo sin competir y evalúo lo que vivimos en el periodo.',
+ cal:'Ronda “La alegría del calentamiento” y juego policías y ladrones.',
+ main:['Elegimos un cuento y su vestuario; lo dramatizamos con movimientos.','Juego cooperativo: pasar el aro, primero en círculo y luego en fila tomadas de la mano.','Vóley bomba, de pie y sentadas, con malla baja.','Juego didáctico de caras y gestos con bolsa de papelitos.','Coevaluación y autoevaluación del periodo.'],
+ calma:'Estiramiento y conclusiones: ¿cómo me pareció la unidad? ¿Qué sugiero?',mat:'Cuentos, aros, bombas, papelitos, malla.',
+ eva:['Coevaluación de seguimiento y autoevaluación.','Actitud: capacidad de escucha, participación y responsabilidad con los elementos.'],
+ casa:'Cuéntale a tu familia el cuento que dramatizamos y represéntenlo juntos.',
+ fam:'Pregunte: ¿qué fue lo que más disfrutaste del periodo?'}
+];
+const ZONES=['Arranque','Mi cuerpo y mi equilibrio','Elementos y juego','Para demostrar lo aprendido','Cierre del periodo'];
+
+const QUIZ=[
+['¿Cuál es un movimiento de locomoción?',['Correr por la cancha','Mantener un pie arriba','Rebotar el balón'],0,'Locomoción es desplazarse: caminar, correr, saltar, reptar.'],
+['Si lanzas con la mano derecha, ¿qué pie va adelante?',['El pie izquierdo','El pie derecho','Los dos juntos'],0,'Se adelanta el pie contrario a la mano que lanza.'],
+['¿Qué te ayuda a mantener el equilibrio?',['Mirar un punto fijo y abrir los brazos','Cerrar los ojos y correr','Mover la cabeza rápido'],0,'Un punto fijo y los brazos abiertos te estabilizan.'],
+['Al caer de un salto sobre la colchoneta, ¿cómo caes?',['Con las rodillas dobladas','Con las piernas rígidas','Sobre las manos sin doblar nada'],0,'Rodillas dobladas amortiguan la caída.'],
+['¿Qué acuerdo cuida a todo el grupo?',['Esperar la señal de la profe','Salir corriendo cuando quiera','Quitarle el balón a otra persona'],0,'Esperar la señal evita choques y accidentes.'],
+['La golosa y la rayuela son…',['Juegos tradicionales','Pruebas de velocidad','Juegos de salón'],0,'Son juegos tradicionales que se juegan de generación en generación.'],
+['Saltar con el pie derecho y luego con el izquierdo es usar…',['Los dos lados del cuerpo','Solo un lado','Solo las manos'],0,'Se llama trabajo ambilateral: ambos lados.'],
+['En pepitas y pepotas, ¿cuándo corres a escapar?',['Cuando dicen el nombre de tu fila','Cuando alguien se ríe','Todo el tiempo'],0,'Es un juego de atención: corres solo cuando dicen tu nombre.']
+];
+const PAIRS=[['Correr','Locomoción'],['Lanzar','Manipulación'],['Estatua en un pie','Estabilidad'],['Golosa','Juego tradicional'],['Cuerda','Salto'],['Adelante, atrás','Orientación']];
+
+const $=s=>document.querySelector(s), app=$('#app');
+let store={};
+try{store=JSON.parse(localStorage.getItem('ava2p1')||'{}')}catch(e){}
+function save(){try{localStorage.setItem('ava2p1',JSON.stringify(store))}catch(e){}}
+const lab={c:'Me costó',m:'Casi lo logro',l:'Lo logré'};
+const icon={'C':['Competencia','c'],'A':['Actitud','a'],'CA':['Competencia y actitud','']};
+
+function nav(h){document.querySelectorAll('.bar nav a').forEach(a=>a.removeAttribute('aria-current'));const e=$('#n-'+h);if(e)e.setAttribute('aria-current','page')}
+function video(n){
+  const v=VID[n];
+  if(n===1) return `<div class="panel"><h3>Mira y escucha</h3><svg viewBox="0 0 320 130" role="img" aria-label="Botella de agua, tenis y silbato" style="width:100%;max-width:420px"><rect x="30" y="30" width="46" height="84" rx="14" fill="var(--teal)"/><rect x="42" y="14" width="22" height="20" rx="5" fill="var(--sun)"/><path d="M38 60h30M38 78h30" stroke="var(--on-teal)" stroke-width="4" stroke-linecap="round"/><path d="M130 100c0-24 20-38 52-38 24 0 40 12 50 26v14H130z" fill="var(--coral)"/><path d="M160 80l14 10M176 74l14 10" stroke="var(--surface)" stroke-width="4" stroke-linecap="round"/><circle cx="270" cy="82" r="24" fill="var(--sun)"/><rect x="262" y="42" width="28" height="12" rx="4" fill="var(--sun)"/></svg><p style="margin:6px 0 0;color:var(--muted)">Agua, uniforme y la señal de la profe: los tres amigos de cada clase.</p></div>`;
+  if(!v) return '';
+  const url='https://www.youtube.com/watch?v='+v[0];
+  const body=EMBED?`<iframe src="https://www.youtube-nocookie.com/embed/${v[0]}" title="${v[1]}" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe><a href="${url}" target="_blank" rel="noopener">Abrir en YouTube</a>`:`<p style="margin:0">${v[1]}</p><a class="btn" href="${url}" target="_blank" rel="noopener">Ver el video en YouTube</a>`;
+  return `<div class="panel vid"><h3>Video de apoyo</h3>${body}</div>`;
+}
+function heroArt(){return `<svg viewBox="0 0 400 340" role="img" aria-label="Dos niños saltando con un balón, un aro y una cuerda" fill="none" stroke="#101C4A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="330" cy="60" r="34" fill="#FF6A57"/><path d="M330 8v-0M330 112v0M278 60h-0M382 60h0" />
+<path d="M40 40l6 14 15 2-11 10 3 15-13-8-13 8 3-15-11-10 15-2z" fill="#fff"/><path d="M360 200l5 11 12 2-9 8 2 12-10-6-10 6 2-12-9-8 12-2z" fill="#fff"/>
+<ellipse cx="200" cy="300" rx="150" ry="22" fill="#101C4A" stroke="none" opacity=".25"/>
+<ellipse cx="96" cy="220" rx="62" ry="22" fill="none" stroke="#7B52FF" stroke-width="12"/><ellipse cx="96" cy="220" rx="62" ry="22" stroke-width="3" transform="translate(0 -7)"/>
+<g><circle cx="140" cy="108" r="26" fill="#FFD9B0"/><path d="M118 98c6-18 38-20 46 0-14-6-30-6-46 0z" fill="#101C4A"/><circle cx="132" cy="110" r="3" fill="#101C4A"/><circle cx="148" cy="110" r="3" fill="#101C4A"/><path d="M132 120q8 7 16 0"/>
+<rect x="116" y="136" width="48" height="62" rx="18" fill="#35B0FF"/><path d="M118 146l-34-36M162 146l36-40"/><path d="M130 196l-16 54M152 196l22 40"/><circle cx="112" cy="254" r="9" fill="#fff"/><circle cx="176" cy="240" r="9" fill="#fff"/></g>
+<g><circle cx="272" cy="120" r="24" fill="#FFD9B0"/><path d="M250 112c4-20 42-22 46 2-14-8-30-8-46-2z" fill="#FF8AC4"/><circle cx="264" cy="122" r="3" fill="#101C4A"/><circle cx="280" cy="122" r="3" fill="#101C4A"/><path d="M264 132q8 7 16 0"/>
+<rect x="250" y="146" width="44" height="58" rx="16" fill="#22CC93"/><path d="M252 156l-36-30M292 156l30 34"/><path d="M262 202l-18 44M282 202l22 40"/><circle cx="240" cy="250" r="9" fill="#fff"/><circle cx="308" cy="246" r="9" fill="#fff"/></g>
+<g transform="translate(196 170)"><circle r="30" fill="#fff"/><path d="M0-12l11 8-4 13h-14l-4-13z" fill="#101C4A"/><path d="M0-12v-18M11-4l17-6M7 9l10 15M-7 9l-10 15M-11-4l-17-6"/></g>
+<path d="M60 128c-30 60-10 150 70 160" stroke="#FFC91F" stroke-width="6" stroke-dasharray="2 12"/></svg>`}
+function home(){
+  nav('inicio');
+  const done=W.filter(w=>store['w'+w.n]).length;
+  const rb='<div>'+Array(8).fill('<span>MUÉVETE ★ JUEGA ★ APRENDE ★ DIVIÉRTETE ★</span>').join('')+'</div>';
+  let h=`<section class="hero"><div><span class="tag">Educación Física · Grado 2° · Periodo 1</span><h1>Mis habilidades en movimiento</h1><div class="bubble">¿Cómo puedo moverme, mantener el equilibrio y manejar los elementos al jugar?</div><a class="cta" href="#s1">¡Empezar!</a></div>${heroArt()}</section>
+  <div class="ribbon" aria-hidden="true">${rb}</div>
+  <h2 class="big">Así se usa este espacio</h2>
+  <div class="steps"><div class="step sticker"><i>1</i><h3>Mira</h3><p style="margin:0">Cada semana tiene su video y su misión. Léela o pídele a tu familia que te la lea.</p></div>
+  <div class="step sticker"><i>2</i><h3>Muévete</h3><p style="margin:0">En clase jugamos y practicamos. En casa puedes hacer el reto de la semana.</p></div>
+  <div class="step sticker"><i>3</i><h3>Gana tu estrella</h3><p style="margin:0">Al terminar cada semana cuenta cómo te fue y se enciende una estrella.</p></div></div>
+  <div class="bring" aria-label="Lo que debes traer"><span class="chip">Uniforme</span><span class="chip">Botella con agua</span><span class="chip">Toalla pequeña</span><span class="chip">¡Muchas ganas!</span></div>
+  <h2 class="big">El camino de 12 semanas</h2>
+  <div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="${done}" aria-label="Semanas completadas"><i style="width:${done/12*100}%"></i></div>
+  <p class="progtxt">${'★'.repeat(done)}${'☆'.repeat(12-done)} · ${done} de 12 estrellas</p>`;
+  ZONES.forEach((z,zi)=>{
+    const ws=W.filter(w=>w.z===z);
+    h+=`<div class="zone"><h3 class="z${zi}">${z}</h3><div class="grid">`+ws.map(w=>`<a class="tile z${zi}${store['w'+w.n]?' done':''}" href="#s${w.n}"><span class="n">${w.n}</span><span class="t">${w.t}</span><span class="st">${store['w'+w.n]?lab[store['w'+w.n]]:(w.eval?'¡Quiz y juego!':'Por jugar')}</span></a>`).join('')+`</div></div>`;
+  });
+  h+=`<footer>Los videos son de YouTube y los revisa la profe antes de cada semana.</footer>`;
+  app.innerHTML=h;
+}
+function week(n){
+  nav('');
+  const w=W[n-1]; if(!w) return home();
+  const i=icon[w.ind], zi=ZONES.indexOf(w.z);
+  const main=w.main.map(x=>`<li>${x}</li>`).join('');
+  let h=`<article class="wk"><div class="banner z${zi}"><div class="num" aria-hidden="true">${w.n}</div><div class="kicker">Semana ${w.n} de 12 · ${w.z}</div><h1>${w.t}</h1><span class="pill">${i[0]}</span></div>
+  <div class="stack">
+   <div class="panel goal"><h3>Mi misión de hoy</h3><p style="margin:0">${w.obj}</p></div>
+   ${w.pact?pact():''}
+   ${video(w.n)}
+   <div class="cols"><div class="panel"><h3>Calentamos</h3><p style="margin:0">${w.cal}</p></div><div class="panel"><h3>Volvemos a la calma</h3><p style="margin:0">${w.calma}</p></div></div>
+   <div class="panel"><h3>Vamos a jugar</h3><ul>${main}</ul><p style="margin:12px 0 0;color:var(--muted)"><b>Materiales:</b> ${w.mat}</p></div>
+   ${w.seg?`<div class="panel safe"><h3>¡Cuidado!</h3><p style="margin:0">${w.seg}</p></div>`:''}
+   ${w.eval===true?evalBlock():''}
+   <div class="cols"><div class="panel home"><h3>Reto para la casa</h3><p style="margin:0">${w.casa}</p></div><div class="panel fam"><h3>Para la familia</h3><p style="margin:0">${w.fam}</p></div></div>
+   <div class="panel"><h3>¿Cómo me fue?</h3><div class="row" id="se">${['c','m','l'].map(k=>`<button class="btn ghost" data-k="${k}" aria-pressed="${store['w'+w.n]===k}">${lab[k]}</button>`).join('')}</div></div>
+  </div>
+  <div class="pager">${n>1?`<a class="btn ghost" href="#s${n-1}">← Semana ${n-1}</a>`:'<span></span>'}<a class="btn ghost" href="#inicio">Todas las semanas</a>${n<12?`<a class="btn" href="#s${n+1}">Semana ${n+1} →</a>`:'<span></span>'}</div></article>`;
+  app.innerHTML=h;
+  document.querySelectorAll('#se button').forEach(b=>b.onclick=()=>{store['w'+n]=b.dataset.k;save();document.querySelectorAll('#se button').forEach(x=>x.setAttribute('aria-pressed',x===b));});
+  if(w.pact) initPact();
+  if(w.eval===true){initQuiz();initMem();}
+}
+function pact(){
+  const items=['Llego a tiempo y con uniforme.','Traigo mi botella de agua y tomo agua cuando la profe lo indica.','Escucho la señal y espero mi turno.','Cuido mi cuerpo y el de mis compañeras: sin empujones.','Hablo con respeto y animo a las demás.'];
+  return `<div class="panel chk"><h3>Nuestros acuerdos de clase</h3><p style="margin:0 0 6px">Marca los que te comprometes a cumplir.</p>${items.map((t,i)=>`<label><input type="checkbox" class="pk" data-i="${i}" ${(store.pact||[]).includes(i)?'checked':''}><span>${t}</span></label>`).join('')}</div>`;
+}
+function initPact(){document.querySelectorAll('.pk').forEach(c=>c.onchange=()=>{store.pact=[...document.querySelectorAll('.pk')].filter(x=>x.checked).map(x=>+x.dataset.i);save();});}
+function evalBlock(){
+  return `<div class="panel"><h3>Quiz y juego de parejas</h3><div class="tabs"><button class="btn" id="tq" aria-pressed="false">Quiz</button><button class="btn ghost" id="tm">Juego de memoria</button></div><div id="quiz"></div><div id="mem" hidden></div></div>`;
+}
+function initQuiz(){
+  let i=0,score=0; const box=$('#quiz');
+  function q(){
+    if(i>=QUIZ.length){const s=Math.round(score/QUIZ.length*3);box.innerHTML=`<p class="stars" aria-label="${s} de 3 estrellas">${'★'.repeat(s)}${'☆'.repeat(3-s)}</p><p>Acertaste ${score} de ${QUIZ.length}.</p><button class="btn" id="re">Intentar de nuevo</button>`;$('#re').onclick=()=>{i=0;score=0;q()};return;}
+    const [t,o,c,e]=QUIZ[i]; const ord=o.map((x,k)=>k).sort((a,b)=>((a*7+i*3)%5)-((b*7+i*3)%5));
+    box.innerHTML=`<p class="kicker">Pregunta ${i+1} de ${QUIZ.length}</p><h3 style="font-size:21px">${t}</h3>`+ord.map(k=>`<button class="opt" data-k="${k}">${o[k]}</button>`).join('')+'<div class="fb" id="fb"></div>';
+    box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      const ok=+b.dataset.k===c; if(ok)score++;
+      box.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(+x.dataset.k===c)x.classList.add('ok')});
+      if(!ok)b.classList.add('bad');
+      $('#fb').innerHTML=(ok?'¡Muy bien! ':'Casi. ')+e+'<div style="margin-top:10px"><button class="btn" id="nx">Siguiente</button></div>';
+      $('#nx').onclick=()=>{i++;q()};
+    });
+  }
+  q();
+  $('#tq').onclick=()=>{$('#quiz').hidden=false;$('#mem').hidden=true;$('#tq').className='btn';$('#tm').className='btn ghost'};
+  $('#tm').onclick=()=>{$('#quiz').hidden=true;$('#mem').hidden=false;$('#tm').className='btn';$('#tq').className='btn ghost'};
+}
+function initMem(){
+  const box=$('#mem'); let cards=[]; PAIRS.forEach((p,k)=>{cards.push({k,t:p[0]},{k,t:p[1]})});
+  cards.sort((a,b)=>((a.t.length*7+a.k)%11)-((b.t.length*7+b.k)%11));
+  let open=[],found=0,moves=0;
+  box.innerHTML=`<p style="margin:0 0 10px">Encuentra cada movimiento con su nombre. Jugadas: <b id="mv">0</b></p><div class="mem">${cards.map((c,j)=>`<button class="card" data-j="${j}" aria-label="Carta ${j+1}">?</button>`).join('')}</div><p id="mw" class="fb" aria-live="polite"></p>`;
+  box.querySelectorAll('.card').forEach(b=>b.onclick=()=>{
+    const j=+b.dataset.j; if(open.length>1||b.classList.contains('up')||b.classList.contains('match'))return;
+    b.classList.add('up'); b.textContent=cards[j].t; open.push(j);
+    if(open.length===2){moves++;$('#mv').textContent=moves;
+      const [a,c]=open; const A=box.querySelectorAll('.card')[a],C=box.querySelectorAll('.card')[c];
+      if(cards[a].k===cards[c].k){A.classList.add('match');C.classList.add('match');open=[];found++;if(found===PAIRS.length)$('#mw').textContent='¡Las encontraste todas en '+moves+' jugadas!';}
+      else setTimeout(()=>{[A,C].forEach(x=>{x.classList.remove('up');x.textContent='?'});open=[]},900);
+    }
+  });
+}
+function familias(){
+  nav('familias');
+  app.innerHTML=`<h1 style="font-size:36px">Para las familias</h1><div class="stack">
+  <div class="panel"><h3>De qué trata este periodo</h3><p style="margin:0">Durante 12 semanas trabajamos cómo se mueve el cuerpo, cómo mantiene el equilibrio y cómo maneja pelotas, aros y cuerdas. La pregunta que guía el periodo es: <b>¿cómo puedo moverme, mantener el equilibrio y manejar los elementos al jugar?</b></p></div>
+  <div class="panel"><h3>Cómo acompañar</h3><ul><li>Revise la bolsa de Educación Física: uniforme, botella de agua y toalla pequeña.</li><li>Pregunte cada semana qué aprendió y qué reto trae para la casa.</li><li>Celebre el esfuerzo y la práctica, no solo el resultado.</li><li>Evite saltos desde alturas en casa; basta con caminar sobre líneas, lanzar y atrapar.</li></ul></div>
+  <div class="panel"><h3>Sobre las notas</h3><p style="margin:0">Las estrellas del quiz y las marcas de autoevaluación se guardan solo en este dispositivo. Son para que cada estudiante vea su propio avance y no cambian ninguna nota oficial.</p></div></div>`;
+}
+function route(){
+  const h=(location.hash||'#inicio').slice(1); window.scrollTo(0,0);
+  const m=/^s(\d{1,2})$/.exec(h);
+  if(m) week(+m[1]); else if(h==='familias') familias(); else home();
+}
+addEventListener('hashchange',route); route();
+</script>
